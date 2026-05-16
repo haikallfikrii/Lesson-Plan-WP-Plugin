@@ -1,0 +1,808 @@
+/* Custom CSS for My Lesson Plan Editor (if needed) */
+/* This file is primarily for additional styles not covered by Tailwind CSS. */
+
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+/* Specific styling for lesson plan editor form elements */
+#lesson-plan-editor-form .form-field {
+    margin-bottom: 1rem;
+}
+
+#lesson-plan-editor-form .form-label {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+/* Style for lesson plan cover preview */
+#lesson-plan-cover-preview {
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #f9fafb;
+}
+
+#lesson-plan-cover-preview img {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for automation section */
+.automation-section {
+    background-color: #f8fafc;
+    border-left: 4px solid #3b82f6;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.file-upload-area {
+    border: 2px dashed #d1d5db;
+    border-radius: 4px;
+    padding: 1rem;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.file-upload-area:hover {
+    border-color: #3b82f6;
+}
+
+/* Status message styling */
+.response-status-message {
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.response-status-message.success {
+    background-color: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+}
+
+.response-status-message.error {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.response-status-message.warning {
+    background-color: #fefce8;
+    color: #ca8a04;
+    border: 1px solid #fef3c7;
+}
+
+/* Draft content area styling */
+.output-content-textarea {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    background-color: #f9fafb;
+}
+
+/* Button hover effects for lesson plan specific actions */
+.browse-lesson-plan-cover:hover,
+.remove-lesson-plan-cover:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+}
+
+/* Form validation styling */
+.form-error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Loading states */
+.loading-overlay {
+    position: relative;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* AI Content Generator Styles */
+.ai-content-generator {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.content-type-checkbox {
+    margin-right: 0.5rem;
+}
+
+.chapters-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.chapter-item {
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chapter-item:hover {
+    background-color: #f9fafb;
+    border-color: #3b82f6;
+}
+
+.chapter-item.active {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.chapter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.chapter-number {
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+.chapter-title {
+    font-weight: 500;
+    color: #374151;
+    flex-grow: 1;
+    margin: 0 1rem;
+}
+
+.chapter-meta {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.chapter-toggle {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.chapter-content {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 0.5rem;
+}
+
+.chapter-text {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.chapter-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-generate-content,
+.btn-view-published {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-generate-content:hover,
+.btn-view-published:hover {
+    background: #059669;
+}
+
+/* Generated Content Styles */
+.generated-content {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.content-type-section {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: white;
+}
+
+.content-type-section h4 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.content-preview {
+    background: #f1f5f9;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.content-preview pre {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.content-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.btn-edit-content,
+.btn-save-draft,
+.btn-publish-content {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit-content:hover,
+.btn-save-draft:hover,
+.btn-publish-content:hover {
+    background: #4f46e5;
+}
+
+.btn-save-draft {
+    background: #f59e0b;
+}
+
+.btn-save-draft:hover {
+    background: #d97706;
+}
+
+.btn-publish-content {
+    background: #10b981;
+}
+
+.btn-publish-content:hover {
+    background: #059669;
+}
+
+/* AI Step Modal Styles */
+.ai-step-content {
+    text-align: left;
+}
+
+.ai-step-content .form-group {
+    margin-bottom: 1rem;
+}
+
+.ai-step-content label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.ai-step-content .form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.ai-step-content textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Publishing Modal Styles */
+.publish-modal {
+    text-align: left;
+}
+
+.publish-modal .form-group {
+    margin-bottom: 1rem;
+}
+
+.publish-modal label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.publish-modal .form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Status Messages */
+.loading {
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+.success {
+    color: #10b981;
+    font-weight: 500;
+}
+
+.error {
+    color: #ef4444;
+    font-weight: 500;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+    
+    .content-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .automation-section {
+        margin: 0.5rem 0;
+        padding: 0.75rem;
+    }
+    
+    #lesson-plan-cover-preview img {
+        max-width: 100px;
+    }
+    
+    .output-content-textarea {
+        font-size: 0.8rem;
+    }
+    
+    .chapters-container {
+        max-height: 300px;
+    }
+    
+    .chapter-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .chapter-title {
+        margin: 0;
+    }
+    
+    .chapter-actions {
+        flex-direction: column;
+    }
+    
+    .content-actions {
+        flex-direction: column;
+    }
+    
+    /* Content Type Selection Mobile */
+    .content-type-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-type-card {
+        padding: 0.75rem;
+    }
+    
+    .content-type-card h4 {
+        font-size: 0.875rem;
+    }
+    
+    .content-type-card p {
+        font-size: 0.75rem;
+    }
+    
+    /* Sidebar Mobile */
+    .sidebar {
+        padding: 1rem;
+    }
+    
+    .sidebar nav {
+        padding: 0;
+    }
+    
+    .sidebar .nav-section {
+        margin-bottom: 1rem;
+    }
+    
+    /* Form Elements Mobile */
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    /* Button Groups Mobile */
+    .button-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .button-group button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    /* Extra Small Screens */
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .content-type-card {
+        padding: 0.5rem;
+    }
+    
+    .sidebar {
+        padding: 0.75rem;
+    }
+    
+    .sidebar .user-profile {
+        padding: 0.75rem;
+    }
+    
+    .sidebar .nav-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Typography Mobile */
+    h1, h2, h3 {
+        font-size: 1.125rem;
+    }
+    
+    h4 {
+        font-size: 1rem;
+    }
+    
+    .text-sm {
+        font-size: 0.75rem;
+    }
+    
+    .text-xs {
+        font-size: 0.625rem;
+    }
+}
+
+/* Content Type Selection Enhanced Styles */
+.content-type-card {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.content-type-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.content-type-card.selected {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content-type-checkbox:checked + .content-type-info {
+    color: inherit;
+}
+
+.content-type-info h4 {
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.content-type-info p {
+    margin: 0;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+/* Selection Summary Enhanced */
+.selection-summary {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.selection-summary-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.selection-count {
+    background: #3b82f6;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.selected-types-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.selected-type-tag {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Sidebar Enhanced Styles */
+.sidebar {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border-right: 1px solid #e2e8f0;
+}
+
+.user-profile {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nav-section {
+    margin-bottom: 1.5rem;
+}
+
+.nav-section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+    padding: 0 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.75rem;
+    color: #475569;
+}
+
+.nav-link:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.nav-link.active {
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 500;
+}
+
+.nav-link i {
+    width: 1rem;
+    text-align: center;
+}
+
+/* Form Enhancements */
+.form-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Button Enhancements */
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
+
+.btn-secondary {
+    background: #6b7280;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #4b5563;
+}
+
+/* --- Download Button Style for Lesson/Vocab Items --- */
+.mle-download-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  padding: 0.2rem 0.85rem;
+  transition: background 0.2s, opacity 0.2s;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.mle-download-btn:hover,.mle-download-btn:focus {
+  background: #1e40af;
+  color: #fff;
+}
+.mle-download-btn:disabled {
+  opacity:0.5; cursor:not-allowed;
+}
+.mle-download-btn .fa-download {
+  margin-right: 0.2rem;
+}
+.mle-download-btn .download-loader {
+  display: none;
+}
+.mle-download-btn.loading .fa-download { visibility: hidden; }
+.mle-download-btn.loading .download-loader { display: inline-block; }
+
+.mle-delete-btn {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  padding: 0.2rem 0.85rem;
+  transition: background 0.2s, opacity 0.2s;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.mle-delete-btn:hover,
+.mle-delete-btn:focus {
+  background: #b91c1c;
+  color: #fff;
+}
+.mle-delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.mle-delete-btn .fa-trash {
+  margin-right: 0.2rem;
+}
+.mle-delete-btn .delete-loader {
+  display: none;
+}
+.mle-delete-btn.loading .fa-trash {
+  visibility: hidden;
+}
+.mle-delete-btn.loading .delete-loader {
+  display: inline-block;
+}
